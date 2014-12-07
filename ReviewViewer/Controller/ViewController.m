@@ -10,6 +10,7 @@
 #import "ReviewListViewController.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 
 @end
@@ -18,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)retrieveReviews:(id)sender {

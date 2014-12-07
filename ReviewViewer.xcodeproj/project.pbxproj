@@ -15,6 +15,8 @@
 		D0A4E8D61A3473AA00E7B08D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E8D21A3473AA00E7B08D /* LaunchScreen.xib */; };
 		D0A4E8D71A3473AA00E7B08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E8D41A3473AA00E7B08D /* Main.storyboard */; };
 		D0A4E8DA1A34778F00E7B08D /* ReviewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E8D91A34778F00E7B08D /* ReviewListViewController.m */; };
+		D0A4E8E31A34894E00E7B08D /* APiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E8E21A34894E00E7B08D /* APiClient.m */; };
+		D0A4E8E71A348BEF00E7B08D /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E8E61A348BEF00E7B08D /* Review.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,11 @@
 		D0A4E8D51A3473AA00E7B08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		D0A4E8D81A34778F00E7B08D /* ReviewListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewListViewController.h; sourceTree = "<group>"; };
 		D0A4E8D91A34778F00E7B08D /* ReviewListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewListViewController.m; sourceTree = "<group>"; };
+		D0A4E8DD1A34883000E7B08D /* ItunesAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ItunesAPI.h; path = ReviewViewer/Network/ItunesAPI.h; sourceTree = "<group>"; };
+		D0A4E8E11A34894E00E7B08D /* APiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APiClient.h; path = ReviewViewer/Network/APiClient.h; sourceTree = "<group>"; };
+		D0A4E8E21A34894E00E7B08D /* APiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APiClient.m; path = ReviewViewer/Network/APiClient.m; sourceTree = "<group>"; };
+		D0A4E8E51A348BEF00E7B08D /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		D0A4E8E61A348BEF00E7B08D /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +91,8 @@
 		D0A4E8A91A34705700E7B08D /* ReviewViewer */ = {
 			isa = PBXGroup;
 			children = (
+				D0A4E8E41A348BE500E7B08D /* Model */,
+				D0A4E8DC1A34877000E7B08D /* Network */,
 				D0A4E8D01A34739000E7B08D /* Controller */,
 				D0A4E8AA1A34705700E7B08D /* Supporting Files */,
 			);
@@ -139,6 +148,26 @@
 				D0A4E8D41A3473AA00E7B08D /* Main.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		D0A4E8DC1A34877000E7B08D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D0A4E8DD1A34883000E7B08D /* ItunesAPI.h */,
+				D0A4E8E11A34894E00E7B08D /* APiClient.h */,
+				D0A4E8E21A34894E00E7B08D /* APiClient.m */,
+			);
+			name = Network;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D0A4E8E41A348BE500E7B08D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0A4E8E51A348BEF00E7B08D /* Review.h */,
+				D0A4E8E61A348BEF00E7B08D /* Review.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +274,8 @@
 				D0A4E8B01A34705800E7B08D /* AppDelegate.m in Sources */,
 				D0A4E8DA1A34778F00E7B08D /* ReviewListViewController.m in Sources */,
 				D0A4E8AD1A34705800E7B08D /* main.m in Sources */,
+				D0A4E8E31A34894E00E7B08D /* APiClient.m in Sources */,
+				D0A4E8E71A348BEF00E7B08D /* Review.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

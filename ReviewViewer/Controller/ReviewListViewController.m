@@ -7,10 +7,13 @@
 //
 
 #import "ReviewListViewController.h"
+#import "APiClient.h"
+#import "Review.h"
 
 @interface ReviewListViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) UITableView    *tableView;
+@property (strong, nonatomic) NSMutableArray *reviews; //Of Reviews
 
 @end
 
@@ -24,6 +27,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     [self setupSubview];
+    [self fetchReview];
 }
 
 -(void)setupSubview{
@@ -33,6 +37,14 @@
     [self.view addSubview:self.tableView];
 }
 
+-(void)fetchReview{
+    APiClient *client = [[APiClient alloc]init];
+    [client getReviewsForAppID:self.appID withCompletion:^(id responseObject, NSError *error) {
+        //Parse the response object
+        //Reload the table view
+    }];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -40,7 +52,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.reviews count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -50,7 +62,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Dummyinfo for appID :%@",self.appID];
+    //By this time table
+    Review *review = (Review *)self.reviews[indexPath.row];
+    cell.textLabel.text = review.reviewDescription;
     return cell;
 }
 
