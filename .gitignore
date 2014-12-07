@@ -1,7 +1,6 @@
 # Xcode
 #
 build/
-buildtmp/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -17,46 +16,11 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-dist
-docs/
-/.irb-history
 
 # CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
 # Pods/
-
-/Resources.bundle/MobiHelp.momd/VersionInfo.plist
-/Mobihelp/MobihelpResource.bundle/MobiHelp.momd/MobiHelp.mom
-/Mobihelp/MobihelpResource.bundle/MobiHelp.momd/VersionInfo.plist
-/Mobihelp/Resources/MessageEntryBackground.png
-/Mobihelp/Resources/MessageEntryBackground@2x.png
-/Mobihelp/Resources/MessageEntryInputField.png
-/Mobihelp/Resources/MessageEntryInputField@2x.png
-/Mobihelp/Resources/MessageEntrySendButton 2.png
-/Mobihelp/Resources/MessageEntrySendButton.png
-/Mobihelp/Resources/MessageEntrySendButton@2x 2.png
-/Mobihelp/Resources/MessageEntrySendButton@2x.png
-/Mobihelp/Resources/MessageEntrySendButtonPressed 2.png
-/Mobihelp/Resources/MessageEntrySendButtonPressed.png
-/Mobihelp/Resources/MessageEntrySendButtonPressed@2x 2.png
-/Mobihelp/Resources/MessageEntrySendButtonPressed@2x.png
-/Mobihelp/Resources/MobiHelp.momd/MobiHelp.mom
-/Mobihelp/Resources/MobiHelp.momd/VersionInfo.plist
-/MobihelpResources.bundle/MobiHelp.momd/MobiHelp.mom
-/MobihelpResources.bundle/MobiHelp.momd/VersionInfo.plist
-/Resources.bundle/MessageEntryBackground.png
-/Resources.bundle/MessageEntryBackground@2x.png
-/Resources.bundle/MessageEntryInputField.png
-/Resources.bundle/MessageEntryInputField@2x.png
-/Resources.bundle/MessageEntrySendButton.png
-/Resources.bundle/MessageEntrySendButton@2x.png
-/Resources.bundle/MessageEntrySendButtonPressed.png
-/Resources.bundle/MessageEntrySendButtonPressed@2x.png
-/Resources.bundle/MobiHelp.momd/MobiHelp.mom
-/FreshdeskSDKResources.bundle/MessageEntryBackground.png
-/FreshdeskSDKResources.bundle/MessageEntryBackground@2x.png
-/FreshdeskSDKResources.bundle/MessageEntryInputField.png
-/FreshdeskSDKResources.bundle/MessageEntryInputField@2x.png
-/FreshdeskSDKResources.bundle/MessageEntrySendButton.png
-/FreshdeskSDKResources.bundle/MessageEntrySendButton@2x.png
-/FreshdeskSDKResources.bundle/MessageEntrySendButtonPressed.png
-/FreshdeskSDKResources.bundle/MessageEntrySendButtonPressed@2x.png
