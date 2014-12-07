@@ -37,11 +37,15 @@
     [self.view addSubview:self.tableView];
 }
 
+// NSAssert([NSThread isMainThread],@"Method called using a thread other than main!");
+
 -(void)fetchReview{
     APiClient *client = [[APiClient alloc]init];
     [client getReviewsForAppID:self.appID withCompletion:^(id responseObject, NSError *error) {
-        //Parse the response object
-        //Reload the table view
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.reviews = responseObject;
+            [self.tableView reloadData];
+        });
     }];
 }
 
@@ -63,8 +67,12 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     //By this time table
-    Review *review = (Review *)self.reviews[indexPath.row];
-    cell.textLabel.text = review.reviewDescription;
+    NSString *review = self.reviews[indexPath.row];
+    if (![review isEqual:[NSNull null]]) {
+        cell.textLabel.text = review;
+    }else{
+        cell.textLabel.text = [NSString stringWithFormat:@"Reviews of appID %@",self.appID];
+    }
     return cell;
 }
 
