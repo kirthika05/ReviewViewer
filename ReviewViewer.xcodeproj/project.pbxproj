@@ -14,6 +14,7 @@
 		D0A4E8C71A34705900E7B08D /* ReviewViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E8C61A34705900E7B08D /* ReviewViewerTests.m */; };
 		D0A4E8D61A3473AA00E7B08D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E8D21A3473AA00E7B08D /* LaunchScreen.xib */; };
 		D0A4E8D71A3473AA00E7B08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A4E8D41A3473AA00E7B08D /* Main.storyboard */; };
+		D0A4E8DA1A34778F00E7B08D /* ReviewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E8D91A34778F00E7B08D /* ReviewListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D0A4E8C61A34705900E7B08D /* ReviewViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewViewerTests.m; sourceTree = "<group>"; };
 		D0A4E8D31A3473AA00E7B08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D0A4E8D51A3473AA00E7B08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		D0A4E8D81A34778F00E7B08D /* ReviewListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewListViewController.h; sourceTree = "<group>"; };
+		D0A4E8D91A34778F00E7B08D /* ReviewListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 			children = (
 				D0A4E8B11A34705800E7B08D /* ViewController.h */,
 				D0A4E8B21A34705800E7B08D /* ViewController.m */,
+				D0A4E8D81A34778F00E7B08D /* ReviewListViewController.h */,
+				D0A4E8D91A34778F00E7B08D /* ReviewListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			files = (
 				D0A4E8B31A34705800E7B08D /* ViewController.m in Sources */,
 				D0A4E8B01A34705800E7B08D /* AppDelegate.m in Sources */,
+				D0A4E8DA1A34778F00E7B08D /* ReviewListViewController.m in Sources */,
 				D0A4E8AD1A34705800E7B08D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
